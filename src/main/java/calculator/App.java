@@ -66,10 +66,19 @@ public class App {
                 intlist.remove(0);
                 // intlist 인덱스0의 저장값을 삭제
                 System.out.println("제일 먼저 저장된 결과가 삭제되었습니다.");
-            }else{
-                System.out.println("삭제할 결과값이 없습니다.");
             }
 
+            System.out.println("저장된 연산결과를 조회하시겠습니까? (inquiry 입력 시 조회)");
+            String inquiry = sc.next();
+            if(inquiry.equals("inquiry")) {
+            for (int intlist_inquiry : intlist) {
+                System.out.print("[");
+                System.out.print(intlist_inquiry);
+                System.out.print("]");
+                System.out.print(", ");
+                }
+                System.out.println();
+            }
                 /*if (nextIndex < numArrays.length) {
                 // 배열이 다 차지 않은 상태            }
                 numArrays[nextIndex] = result;

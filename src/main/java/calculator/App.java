@@ -6,7 +6,7 @@ public class App {
     public static void main(String[] args) {
         int[] numArrays = new int[10];
         // 10개의 배열을 선언한다는 의미에서 numArrays
-        int lastIndex = 0;
+        int nextIndex = 0;
         // 다음 값을 저장할 위치를 결정
         Scanner sc = new Scanner(System.in);
 
@@ -51,10 +51,9 @@ public class App {
             System.out.println("결과: " + result);
 
             for(int i = 1; i <= 10; i++) {
-                numArrays[lastIndex] = i;
-                lastIndex++;
+                numArrays[nextIndex] = i;
+                nextIndex++;
             }
-
 
             System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");
             String finish = sc.next();

@@ -50,10 +50,8 @@ public class App {
             }
             System.out.println("결과: " + result);
 
-            for(int i = 1; i <= 10; i++) {
-                numArrays[nextIndex] = i;
+            numArrays[nextIndex] = result;
                 nextIndex++;
-            }
 
             System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");
             String finish = sc.next();

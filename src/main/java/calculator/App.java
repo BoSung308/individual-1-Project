@@ -2,11 +2,10 @@ package calculator;
 
 import java.util.LinkedList;
 import java.util.Scanner;
-import java.util.List;
 
 public class App {
     public static void main(String[] args) {
-        LinkedList<Integer> intlist = new LinkedList<Integer>();
+        LinkedList<Integer> intlist = new LinkedList<>();
         // int [] numArrays = new int[10];
         // 10개의 배열을 선언한다는 의미에서 numArrays
         int nextIndex = 0;
@@ -27,6 +26,7 @@ public class App {
 
             // if문으로 해보았는데 예외처리를 할 수가 없었다
             // 결국 switch문으로 해결했지만, if문에 대한 예외처리 공부가 더 필요
+
             int result = 0;
             switch (operator) {
                 case '+':

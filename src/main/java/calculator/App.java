@@ -50,21 +50,22 @@ public class App {
             }
             System.out.println("결과: " + result);
 
-            if(nextIndex < numArrays.length) {
+            if (nextIndex < numArrays.length) {
                 // 배열이 다 차지 않은 상태            }
                 numArrays[nextIndex] = result;
                 // 결과 값을 배열의  인덱스에 저장
                 nextIndex++;
-            } else{
-                for(int i = 1; i < numArrays.length; i++) {
+            } else {
+                for (int i = 1; i < numArrays.length; i++) {
                     //배열이 꽉 찼을 때
-                    numArrays[i-1] = numArrays[i];
+                    numArrays[i - 1] = numArrays[i];
                     // 새로운 값을 배열 마지막에 넣음
-                    }
-            System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");
-            String finish = sc.next();
-            if (finish.equals("exit")) {
-                break;
+                }
+                System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");
+                String finish = sc.next();
+                if (finish.equals("exit")) {
+                    break;
+                }
             }
         }
     }

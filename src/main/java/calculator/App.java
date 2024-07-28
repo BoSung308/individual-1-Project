@@ -94,7 +94,12 @@ public class App {
                 */
 
             System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");
-            String finish = sc.next();
+            String finish = null;
+            try {
+                finish = sc.next();
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
             if (finish.equals("exit")) {
                 break;
             }

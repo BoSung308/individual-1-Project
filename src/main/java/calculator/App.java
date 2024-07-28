@@ -8,6 +8,9 @@ public class App {
         LinkedList<Integer> intlist = new LinkedList<>();
         // int [] numArrays = new int[10];
         // 10개의 배열을 선언한다는 의미에서 numArrays
+        Calculator cal = new Calculator();
+        // Calculator 클래스로부터 인스턴스 생성
+
         int nextIndex = 0;
         // 다음 값을 저장할 위치를 결정
         Scanner sc = new Scanner(System.in);
@@ -18,16 +21,15 @@ public class App {
             System.out.print("두 번째 숫자를 입력하세요 : ");
             int num2 = sc.nextInt();
 
-
             System.out.println("사칙연산 기호를 입력하세요 : ");
-            // charAt(idx) : charAt 메서드는 매개변수로 char 타입으로 반환 하고자하는 문자열의 위치를 받음.
             char operator = sc.next().charAt(0);
+            // charAt(idx) : charAt 메서드는 매개변수로 char 타입으로 반환 하고자하는 문자열의 위치를 받음.
+            int result = cal.calculate(num1, num2, operator);
+            System.out.println("결과 : " + result);
 
-
+            /* int result = 0;
             // if문으로 해보았는데 예외처리를 할 수가 없었다
-            // 결국 switch문으로 해결했지만, if문에 대한 예외처리 공부가 더 필요
-
-            int result = 0;
+            // switch문으로 해결했지만, if문에 대한 예외처리 공부가 더 필요
             switch (operator) {
                 case '+':
                     result = num1 + num2;
@@ -78,18 +80,18 @@ public class App {
                 }
                 System.out.println();
             }
-                /*if (nextIndex < numArrays.length) {
+                *//*if (nextIndex < numArrays.length) {
                 // 배열이 다 차지 않은 상태            }
                 numArrays[nextIndex] = result;
                 // 결과 값을 배열의  인덱스에 저장
-                nextIndex++;*/ // 문제를 다 읽고 풀어볼걸,,, 배열로 작성했는데 리스트로 바꾸라니 엉엉...
+                nextIndex++;*//* // 문제를 다 읽고 풀어볼걸,,, 배열로 작성했는데 리스트로 바꾸라니 엉엉...
 
-               /* for (int i = 1; i < numArrays.length; i++) {
+             *//* for (int i = 1; i < numArrays.length; i++) {
                /* for (int i = 1; i < numArrays.length; i++) {
                     //배열이 꽉 찼을 때
                     numArrays[i - 1] = numArrays[i];
                     // 새로운 값을 배열 마지막에 넣음
-                }*/
+                */
 
             System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");
             String finish = sc.next();
@@ -97,7 +99,8 @@ public class App {
                 break;
             }
             System.out.println("숫자를 더 입력받겠습니다.");
-            // if - else문과 관련없는 내용은 가독성이 안좋기 때문에 if문 닫고 sout으로 가능한 해결하는 것 추천
+            // else문에서 sout사용할때 가독성이 안좋기 때문에 if문 닫고 sout으로 가능한 해결하는 것이 좋음
         }
     }
 }
+

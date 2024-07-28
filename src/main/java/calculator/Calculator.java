@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class Calculator {
     ArrayList<Integer> keep;
+
     // ArrayList<Integer> 타입의 필드 선언, keep은 Integer 객체를 저장하는 리스트 참조
     // 현재 keep은 ArrayList 객체를 참조하지않고, 나중에 객체를 생성하여 참조할수 있는 준비 상태
     // Class선언
@@ -27,14 +28,15 @@ public class Calculator {
         } else if (operator == '*') {
             result = num1 * num2;
         } else if (operator == '/') {
-            result = num1 / num2;
             try {
                 if (num2 == 0) {
                     throw new ArithmeticException ("나눗셈 연산에서 분모(두 번째 정수)에 0이 입력될 수 없습니다.");
                 }
+                result = num1 / num2;
             } catch (ArithmeticException  e) {
                 e.printStackTrace();
-                // 예외가 발생한 지점과 메서드 호출 경로를 출력 -> 이를 통해 예외가 어디서 발생했는지, 어떻게 전파되었는지를 알 수 있음
+                // 예외가 발생한 지점과 메서드 호출 경로를 출력 -> 이를 통해 예외가 어디서 발생했는지, 어떻게 전파되었는지를 알 수 있음.
+                return 0;
             }
             keep.add(result);
             // 결과를 리스트에 추가

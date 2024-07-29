@@ -1,11 +1,10 @@
 package calculator;
 
-import java.util.LinkedList;
 import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
-        LinkedList<Integer> intlist = new LinkedList<>();
+        //LinkedList<Integer> intlist = new LinkedList<>();
         // int [] numArrays = new int[10];
         // 10개의 배열을 선언한다는 의미에서 numArrays
         Calculator cal = new Calculator();
@@ -25,7 +24,13 @@ public class App {
             char operator = sc.next().charAt(0);
             // charAt(idx) : charAt 메서드는 매개변수로 char 타입으로 반환 하고자하는 문자열의 위치를 받음.
             int result = cal.calculate(num1, num2, operator);
-            System.out.println("결과 : " + result);
+            System.out.println("계산 결과 : " + result);
+
+//            int results = 0;
+//            cal.setKeep(results);
+//            System.out.println("모든 계산 결과 : " + cal.getKeep());
+
+
 
             /* int result = 0;
             // if문으로 해보았는데 예외처리를 할 수가 없었다

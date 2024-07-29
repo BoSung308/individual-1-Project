@@ -33,33 +33,22 @@ public class App {
             System.out.println("계산 결과 : " + result);
 
             cal.addResult(result);
+            //
             System.out.println("현재 저장된 결과 : " + cal.getList());
 
             System.out.println("가장 먼저 저장된 연산 결과를 삭제하시겠습니까? (remove 입력 시 삭제)");
             String remove = sc.next();
-
             if (remove.equals("remove")) {
                cal.removeResult(remove);
             }
 
+            System.out.println("저장된 연산결과를 조회하시겠습니까? (inquiry 입력 시 조회)");
+            String inquiry = sc.next();
+            if(inquiry.equals("inquiry")){
+                cal.inquiryResults(result);
+            }
 
-//            System.out.println("결과: " + result);
-//            if (0 <= nextIndex && nextIndex <= 10) {
-//                intlist.add(result);
-//                // 결과 값을 LinkedList 인덱스에 저장
-//                nextIndex++;
-//            }
-//            System.out.println("현재 저장된 결과 : " + intlist);
-//
-//            System.out.println("가장 먼저 저장된 연산 결과를 삭제하시겠습니까? (remove 입력 시 삭제)");
-//            String remove = sc.next();
-//            if (remove.equals("remove")) {
-//                // String 클래스는 equals()메서드를 오버라이드하여 문자열 내용 비교
-//                intlist.remove(0);
-//                // intlist 인덱스0의 저장값을 삭제
-//                System.out.println("제일 먼저 저장된 결과가 삭제되었습니다.");
-//            }
-//
+
 //            System.out.println("저장된 연산결과를 조회하시겠습니까? (inquiry 입력 시 조회)");
 //            String inquiry = sc.next();
 //            if (inquiry.equals("inquiry")) {

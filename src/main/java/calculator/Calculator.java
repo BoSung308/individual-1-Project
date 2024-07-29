@@ -3,7 +3,8 @@ package calculator;
 import java.util.ArrayList;
 public class Calculator {
     private final ArrayList<Integer> list = new ArrayList<>();
-    private int results ;
+    private ArrayList<Integer> inquiryResults;
+    private int results;
     private int index;
 
     // ArrayList<Integer> 타입의 필드 선언, list는 Integer 객체를 저장하는 리스트 참조
@@ -23,11 +24,19 @@ public class Calculator {
         list.add(result);
     }
 
-
     public void removeResult(String remove){
         list.remove(0);
         System.out.println("제일 먼저 저장된 결과" + remove + "가 삭제되었습니다.");
     }
+
+
+    public void inquiryResults(int result){
+        for(int i = 0; i < list.size(); i++){
+            System.out.print(list.get(i) + " ");
+        }
+        System.out.println();
+    }
+
 
     public int calculate(int num1, int num2, char operator) {
         // 객체가 가지고 있어야할 메서드 정의
@@ -79,7 +88,4 @@ public class Calculator {
 //                e.printStackTrace();
 //                System.out.println("올바른 사칙연산을 입력하세요");
 // 예외가 발생한 지점과 메서드 호출 경로를 출력 -> 이를 통해 예외가 어디서 발생했는지, 어떻게 전파되었는지를 알 수 있음.
-//           }
-
-
-
+//}

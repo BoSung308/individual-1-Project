@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) {
         //LinkedList<Integer> intlist = new LinkedList<>();
-        // int [] numArrays = new int[10];
+         int [] numArrays = new int[10];
         // 10개의 배열을 선언한다는 의미에서 numArrays
         Calculator cal = new Calculator();
         ArrayList<Integer> results = new ArrayList<>();
@@ -37,6 +37,7 @@ public class App {
 
             System.out.println("가장 먼저 저장된 연산 결과를 삭제하시겠습니까? (remove 입력 시 삭제)");
             String remove = sc.next();
+
             if (remove.equals("remove")) {
                cal.removeResult(remove);
             }

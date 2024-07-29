@@ -2,11 +2,12 @@ package calculator;
 
 import java.util.ArrayList;
 public class Calculator {
-    private ArrayList<Integer> keep = new ArrayList<>();
+    private final ArrayList<Integer> list = new ArrayList<>();
     private int results ;
+    private int index;
 
-    // ArrayList<Integer> 타입의 필드 선언, keep은 Integer 객체를 저장하는 리스트 참조
-    // 현재 keep은 ArrayList 객체를 참조하지않는상태이고 객체를 생성하여 참조할수 있는 준비 상태
+    // ArrayList<Integer> 타입의 필드 선언, list는 Integer 객체를 저장하는 리스트 참조
+    // 현재 list는 ArrayList 객체를 참조하지않는상태이고 객체를 생성하여 참조할수 있는 준비 상태
     // 왜 ArrayList 컬렉션을 사용했을까?
 
    /*     public Calculator() {
@@ -15,12 +16,17 @@ public class Calculator {
     // 'Calculator' 클래스의 생성자 정의,, 생성자는 객체가 생성될 떄 자동으로 호출되는 메서드
     // 클래스 내에서 Integer 타입의 객체를 저장할 수 있는 ArrayList 참조
     // 생성자를 정의함으로써 keep 필드에 생성된 ArrayList 객체 할당, keep 필드는 빈 ArrayList 참조
-    public ArrayList<Integer> getKeep() {
-        return keep;
+    public ArrayList<Integer> getList() {
+        return list;
     }
-    public void setKeep(int keep) {
+    public void addResult(int result) {
+        list.add(result);
+    }
 
-        this.results = keep;
+
+    public void removeResult(String remove){
+        list.remove(0);
+        System.out.println("제일 먼저 저장된 결과" + remove + "가 삭제되었습니다.");
     }
 
     public int calculate(int num1, int num2, char operator) {

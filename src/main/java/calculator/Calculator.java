@@ -35,7 +35,7 @@ public class Calculator {
         // 결과 리스트 중 가장 먼저 저장된 값을 삭제
     }
 
-    public void inquiryResults(double result) {
+    public void inquiryResults() {
         for (Double arith : ariResult) {
             System.out.print(arith + " ");
             // 줄바꿈을 하지않고 결과 조회
@@ -49,7 +49,7 @@ public class Calculator {
         return area;
     }
 
-    public void circleResultInquiry(double circleResult) {
+    public void circleResultInquiry() {
         for (Double j : ariResult) {
             System.out.print(ariResult + " ");
         }

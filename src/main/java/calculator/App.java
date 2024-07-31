@@ -31,6 +31,7 @@ public class App {
 
                 System.out.println("사칙연산 기호를 입력하세요 : ");
                 char operator = sc.next().charAt(0);
+                // 연산자 입력
                 // charAt(idx) : charAt 메서드는 매개변수로 char 타입으로 반환 하고자하는 문자열의 위치를 받음.
 
                 double result = arithmeticCalculator.calculate(num1,num2,operator);
@@ -48,10 +49,8 @@ public class App {
                 System.out.println("저장된 연산결과를 조회하시겠습니까? (inquiry 입력 시 조회)");
                 String inquiry = sc.next();
                 if (inquiry.equals("inquiry")) {
-                    arithmeticCalculator.inquiryResults(result);
+                    arithmeticCalculator.inquiryResults();
                 }
-
-
             } else if (conditionNum == 2) {
                 System.out.println("반지름을 입력하세요.");
                 double radius = sc.nextDouble();
@@ -71,7 +70,7 @@ public class App {
                 System.out.println("저장된 연산결과를 조회하시겠습니까? (inquiry 입력 시 조회)");
                 String inquiry = sc.next();
                 if (inquiry.equals("inquiry")) {
-                    circleCalculator.circleResultInquiry(area);
+                    circleCalculator.circleResultInquiry();
                 }
 
             }
